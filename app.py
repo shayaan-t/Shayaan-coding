@@ -272,7 +272,7 @@ def calculator():
             if num2 != 0:
                 message = num1/num2
             else:
-                message = "∞, infinity"
+                message = "∞, infinite"
         elif operator == "remainder":
             if num2 != 0:
                 message = num1/num2
