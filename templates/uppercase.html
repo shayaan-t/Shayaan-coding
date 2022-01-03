@@ -1,0 +1,15 @@
+{%extends "layout.html"%}
+{%block content%}
+
+<form action="/uppercase" method="post">
+    <h2>String lower to upper Convertion</h2>
+    <label for="">Enter a String </label>
+    <input type="text" name="string" id="">
+    <button type="submit">Submit</button>
+    <h1 style="color: blue;">
+
+        {{result}}
+    </h1>
+</form>
+
+{%endblock%}

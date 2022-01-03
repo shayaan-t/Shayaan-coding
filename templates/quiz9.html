@@ -1,0 +1,48 @@
+{%extends "layout.html"%}
+{%block content%}
+    <div class="firstdiv" >
+        <h1>MCQ QUIZ</h1><span>(9 of 10)</span>
+    </div>
+    <div class="seconddiv" >
+        <form action="/quiz9" method="POST">    
+            <div class="question bg-white p-3 " style="border: solid lightgray 1px;">
+                <div class="d-flex flex-row align-items-center question-title">
+                    <h3 class="text-danger">Q. 9</h3>
+                    <h5 class="mt-1 ml-2">Which bank has launched India's first credit card made of recycled PVC plastic?</h5>
+                </div>
+                <div class="ans ml-2">
+                    <label class="radio"> <input type="radio" name="bank" value="Standard Chartered Bank" required> <span>Standard Chartered Bank</span>
+                    </label>
+                </div>
+                <div class="ans ml-2">
+                    <label class="radio"> <input type="radio" name="bank" value="RBL Bank" required> <span>RBL Bank</span>
+                    </label>
+                </div>
+                <div class="ans ml-2">
+                    <label class="radio"> <input type="radio" name="bank" value="ICICI Bank" required> <span>ICICI Bank</span>
+                    </label>
+                </div>
+                <div class="ans ml-2">
+                    <label class="radio"> <input type="radio" name="bank" value="HDFC Bank" required> <span>HDFC Bank</span>
+                    </label>
+                </div>
+            </div>
+            <div class="thirddiv" >
+                <span><button class="btn btn-primary border-success  btn-success" type="submit">SUBMIT</button></span>
+                <span>
+                <a href="/quiz8">
+                    <button class="btn btn-primary border-success  btn-success" type="button" >Previous<i class="fa fa-angle-right ml-2"></i>
+                    </button>
+                </a>
+                <a href="/quiz10">
+                    <button class="btn btn-primary border-success  btn-success" type="button" >Next<i class="fa fa-angle-right ml-2"></i>
+                    </button>
+                </a>
+                </span>
+            </div>
+            <input type="hidden" name="attempted" value="attempted">
+        </form>
+    </div>
+    <h1>{{ result }}</h1>
+    <h2>Score = </h2>
+{%endblock%}

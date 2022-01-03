@@ -1,0 +1,50 @@
+{%extends "layout.html"%}
+{%block content%}
+    <div class="firstdiv" >
+        <h1>MCQ QUIZ</h1><span>(6 of 10)</span>
+    </div>
+    <div class="seconddiv" >
+        <form action="/quiz6" method="POST">    
+            <div class="question bg-white p-3 " style="border: solid lightgray 1px;">
+                <div class="d-flex flex-row align-items-center question-title">
+                    <h3 class="text-danger">Q. 6</h3>
+                    <h5 class="mt-1 ml-2">How many 6's are there in the following sequence, 
+                        which are either immediately preceded by 2 or immediately followed by 9?  
+                        5 6 2 4 3 6 9 2 6 7 1 6 4 7 6 8 2 6 3 4 6 9 8 6 2</h5>
+                </div>
+                <div class="ans ml-2">
+                    <label class="radio"> <input type="radio" name="find" value="1" required> <span>1</span>
+                    </label>
+                </div>
+                <div class="ans ml-2">
+                    <label class="radio"> <input type="radio" name="find" value="2" required> <span>2</span>
+                    </label>
+                </div>
+                <div class="ans ml-2">
+                    <label class="radio"> <input type="radio" name="find" value="3" required> <span>3</span>
+                    </label>
+                </div>
+                <div class="ans ml-2">
+                    <label class="radio"> <input type="radio" name="find" value="4" required> <span>4</span>
+                    </label>
+                </div>
+            </div>
+            <div class="thirddiv" >
+                <span><button class="btn btn-primary border-success  btn-success" type="submit">SUBMIT</button></span>
+                <span>
+                <a href="/quiz5">
+                    <button class="btn btn-primary border-success  btn-success" type="button" >Previous<i class="fa fa-angle-right ml-2"></i>
+                    </button>
+                </a>
+                <a href="/quiz7">
+                    <button class="btn btn-primary border-success  btn-success" type="button" >Next<i class="fa fa-angle-right ml-2"></i>
+                    </button>
+                </a>
+                </span>
+            </div>
+            <input type="hidden" name="attempted" value="attempted">
+        </form>
+    </div>
+    <h1>{{ result }}</h1>
+    <h2>Score = </h2>
+{%endblock%}

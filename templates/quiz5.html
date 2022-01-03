@@ -1,0 +1,48 @@
+{%extends "layout.html"%}
+{%block content%}
+    <div class="firstdiv" >
+        <h1>MCQ QUIZ</h1><span>(5 of 10)</span>
+    </div>
+    <div class="seconddiv" >
+        <form action="/quiz5" method="POST">    
+            <div class="question bg-white p-3 " style="border: solid lightgray 1px;">
+                <div class="d-flex flex-row align-items-center question-title">
+                    <h3 class="text-danger">Q. 5</h3>
+                    <h5 class="mt-1 ml-2">Which of the following is the smallest continent?</h5>
+                </div>
+                <div class="ans ml-2">
+                    <label class="radio"> <input type="radio" name="smallestc" value="Europe" required> <span>Europe</span>
+                    </label>
+                </div>
+                <div class="ans ml-2">
+                    <label class="radio"> <input type="radio" name="smallestc" value="Antarctica" required> <span>Antarctica</span>
+                    </label>
+                </div>
+                <div class="ans ml-2">
+                    <label class="radio"> <input type="radio" name="smallestc" value="Australia" required> <span>Australia</span>
+                    </label>
+                </div>
+                <div class="ans ml-2">
+                    <label class="radio"> <input type="radio" name="smallestc" value="North America" required> <span>North America</span>
+                    </label>
+                </div>
+            </div>
+            <div class="thirddiv" >
+                <span><button class="btn btn-primary border-success  btn-success" type="submit">SUBMIT</button></span>
+                <span>
+                <a href="/quiz4">
+                    <button class="btn btn-primary border-success  btn-success" type="button" >Previous<i class="fa fa-angle-right ml-2"></i>
+                    </button>
+                </a>
+                <a href="/quiz6">
+                    <button class="btn btn-primary border-success  btn-success" type="button" >Next<i class="fa fa-angle-right ml-2"></i>
+                    </button>
+                </a>
+                </span>
+            </div>
+            <input type="hidden" name="attempted" value="attempted">
+        </form>
+    </div>
+    <h1>{{ result }}</h1>
+    <h2>Score = </h2>
+{%endblock%}

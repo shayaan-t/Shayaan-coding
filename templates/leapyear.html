@@ -1,0 +1,15 @@
+{%extends "layout.html"%}
+{%block content%}
+
+<form action="/leapyear" method="post">
+    <h2>Leap Year evaluation</h2>
+    <label for="">Enter any year </label>
+    <input type="number" name="year" id="">
+    <button type="submit">Submit</button>
+    <h1 style="color: blue;">
+
+        {{result}}
+    </h1>
+</form>
+
+{%endblock%}

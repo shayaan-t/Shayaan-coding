@@ -1,0 +1,22 @@
+{%extends "layout.html"%}
+{%block content%}
+
+<form action="/largest" method="post">
+    <h2>Program to find largest among 3 numbers</h2>
+    <label for="">
+        Enter a number
+        <input type="number" name="number1" >
+    </label>
+    <label for="">
+        Enter a number
+        <input type="number" name="number2" >
+    </label>
+    <label for="">
+        Enter a number
+        <input type="number" name="number3" >
+    </label>
+    <button type="submit">Submit</button>
+    <h1 style="color: blue;"> {{result}}</h1>
+</form>
+
+{%endblock%}

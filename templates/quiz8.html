@@ -1,0 +1,48 @@
+{%extends "layout.html"%}
+{%block content%}
+    <div class="firstdiv" >
+        <h1>MCQ QUIZ</h1><span>(8 of 10)</span>
+    </div>
+    <div class="seconddiv" >
+        <form action="/quiz8" method="POST">    
+            <div class="question bg-white p-3 " style="border: solid lightgray 1px;">
+                <div class="d-flex flex-row align-items-center question-title">
+                    <h3 class="text-danger">Q. 8</h3>
+                    <h5 class="mt-1 ml-2">Name the present virus spreading in the World</h5>
+                </div>
+                <div class="ans ml-2">
+                    <label class="radio"> <input type="radio" name="virus" value="Covid-21" required> <span>Covid-21</span>
+                    </label>
+                </div>
+                <div class="ans ml-2">
+                    <label class="radio"> <input type="radio" name="virus" value="Post-covid" required> <span>Post-covid</span>
+                    </label>
+                </div>
+                <div class="ans ml-2">
+                    <label class="radio"> <input type="radio" name="virus" value="Omicron" required> <span>Omicron</span>
+                    </label>
+                </div>
+                <div class="ans ml-2">
+                    <label class="radio"> <input type="radio" name="virus" value="Covid-4th wave" required> <span>Covid-4th wave</span>
+                    </label>
+                </div>
+            </div>
+            <div class="thirddiv" >
+                <span><button class="btn btn-primary border-success  btn-success" type="submit">SUBMIT</button></span>
+                <span>
+                <a href="/quiz7">
+                    <button class="btn btn-primary border-success  btn-success" type="button" >Previous<i class="fa fa-angle-right ml-2"></i>
+                    </button>
+                </a>
+                <a href="/quiz9">
+                    <button class="btn btn-primary border-success  btn-success" type="button" >Next<i class="fa fa-angle-right ml-2"></i>
+                    </button>
+                </a>
+                </span>
+            </div>
+            <input type="hidden" name="attempted" value="attempted">
+        </form>
+    </div>
+    <h1>{{ result }}</h1>
+    <h2>Score = </h2>
+{%endblock%}
